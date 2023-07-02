@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&family=Outfit:wght@400;700&display=swap');
+
+:root {
+    font-size: 16px;
+    --lightRed: hsl(0, 100%, 67%);
+    --lightRed-50: hsla(0, 100%, 67%, 0.05);
+    --orangeyYellow: hsl(39, 100%, 56%);
+    --orangeyYellow-50: hsla(39, 100%, 56%, 0.05);
+    --greenTeal: hsl(166, 100%, 37%);
+    --greenTeal-50: hsla(166, 100%, 37%, 0.05);
+    --cobaltBlue: hsl(234, 85%, 45%);
+    --cobaltBlue-50: hsla(234, 85%, 45%, 0.05);
+    --lightSlateBlue: hsl(252, 100%, 67%);
+    --lightRoyalBlue: hsl(241, 81%, 54%);
+    --violetBlue: hsla(256, 72%, 46%, 1);
+    --persianBlue: hsla(241, 72%, 46%, 0);
+    --pale-Blue: hsl(221, 100%, 96%);
+    --lightLavender: hsl(241, 100%, 89%);
+    --darkGrayBlue: hsl(224, 30%, 27%);
+    --darkGrayBlue-60: hsla(224, 30%, 27%, 0.6);
+    --white-100: hsl(0, 0%, 100%);
+    --white-80: hsl(0, 0%, 80%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Hanken Grotesk', sans-serif;
+}
+
+main {
+    min-height: 100vh;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+}
+
+.result-summary {
+    background: linear-gradient(0deg, var(--lightRoyalBlue) 30%, var(--lightSlateBlue) 100%);
+    color: hsl(0, 0%, 100%);
+    padding: 1.5rem 2rem;
+    border-radius: 0 0 1.5rem 1.5rem;
+    text-align: center;
+}
+
+.result-title {
+    font-size: 1.3rem;
+    color: var(--darkGrayBlue);
+}
+
+.result-summary .result-title {
+    color: var(--white-80);
+}
+
+.result-score .total-score {
+    background: linear-gradient(0deg,var(--persianBlue), var(--violetBlue));
+    padding: 2.5rem;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-weight: 500;
+    font-size: 0.875rem;
+    color: var(--white-80);
+    margin: 0.5rem auto;
+}
+
+.result-score .total-score strong {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--white-100);
+    margin: 0;
+}
+
+.result-rating-title {
+    font-weight: 700;
+}
+
+.result-description {
+    color: var(--white-80);
+    margin: 0.5rem 0;
+    font-size: 1rem;
+    padding: 0 1.5rem;
+}
+
+.result-details {
+    padding: 1.5rem 2rem;
+}
+
+.list-scores {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin: 1.5rem 0;
+}
+
+.result-score {
+    padding: 1rem;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 500;
+}
+
+.result-score img {
+    margin-right: 0.5rem;
+}
+
+.result-score span {
+    margin-left: auto;
+    color: var(--darkGrayBlue-60);
+    font-weight: 700;
+}
+
+.result-score strong {
+    color: var(--darkGrayBlue);
+    margin-right: 0.5rem;
+}
+
+.result-score-reaction {
+    background-color: var(--lightRed-50);
+    color: var(--lightRed);
+}
+
+.result-score-memory {
+    background-color: var(--orangeyYellow-50);
+    color: var(--orangeyYellow);
+}
+
+.result-score-verbal {
+    background-color: var(--greenTeal-50);
+    color: var(--greenTeal);
+}
+
+.result-score-visual {
+    background-color: var(--cobaltBlue-50);
+    color: var(--cobaltBlue);
+}
+
+.link-button {
+    background: var(--darkGrayBlue);
+    color: var(--white-100);
+    display: block;
+    padding: 1rem;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 9999px;
+}
+
+.link-button:hover {
+    color: var(--white-80);
+    background: linear-gradient(0deg, var(--lightRoyalBlue) 30%, var(--lightSlateBlue) 100%);
+}
+
+@media screen and (min-width: 48em) {
+    .result-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        max-width: 44rem;
+        margin: auto;
+        background-color: var(--white-100);
+        box-shadow: 20px 30px 35px var(--cobaltBlue-50);
+        border-radius: 1.5rem;
+    }
+
+    .result-summary, .result-details {
+        width: 50%;
+    }
+
+    .result-summary {
+        border-radius: 1.5rem;
+        padding: 2.5rem;
+    }
+
+    .result-score .total-score {
+        width: 7rem;
+        height: 7rem;
+    }
+
+    .result-score .total-score strong {
+        font-size: 4rem;
+    }
+
+    .result-details {
+        padding: 2rem 2.5rem;
+    }
+}
