@@ -25,25 +25,23 @@ const maxScore = 100;
 let total = 0;
 
 for (let i = 0; i < ratings.length; i++) {
-  let ratingItem = document.createElement("li");
-  let ratingIcon = document.createElement("img");
-  let ratingScore = document.createElement("span");
-  let ratingScoreNumber = document.createElement("strong");
+  let li = document.createElement("li");
+  let img = document.createElement("img");
+  let strong = document.createElement("strong");
 
-  ratingIcon.setAttribute("src", ratings[i].icon);
-  ratingIcon.setAttribute("alt", `${ratings[i].category} icon`);
+  img.setAttribute("src", ratings[i].icon);
+  img.setAttribute("alt", `${ratings[i].category} icon`);
 
-  ratingScoreNumber.append(document.createTextNode(`${ratings[i].score}`));
-  ratingScore.append(ratingScoreNumber, `/ ${maxScore}`);
+  strong.append(document.createTextNode(`${ratings[i].score} / ${maxScore}`));
 
-  ratingItem.setAttribute(
+  li.setAttribute(
     "class",
     `result-score result-score-${ratings[i].category.toLowerCase()}`
   );
 
-  ratingItem.append(ratingIcon, `${ratings[i].category}`, ratingScore);
+  li.append(img, `${ratings[i].category}`, strong);
 
-  document.querySelector(".list-scores").appendChild(ratingItem);
+  document.querySelector(".list-scores").appendChild(li);
 
   total += ratings[i].score;
 }

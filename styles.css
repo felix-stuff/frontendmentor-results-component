@@ -115,15 +115,10 @@ main {
     margin-right: 0.5rem;
 }
 
-.result-score span {
+.result-score strong {
     margin-left: auto;
     color: var(--darkGrayBlue-60);
     font-weight: 700;
-}
-
-.result-score strong {
-    color: var(--darkGrayBlue);
-    margin-right: 0.5rem;
 }
 
 .result-score-reaction {
